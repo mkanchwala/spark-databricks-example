@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mkanchwala</groupId>
+	<artifactId>spark-xml-cluster-example</artifactId>
+	<version>1.0.0</version>
+	<name>Spark XML Transformer - Example</name>
+	<description>This is a demo example for Spark XML capabilities within Distributed environment</description>
+	<properties>
+		<scala.version>2.11</scala.version>
+		<spark.version>2.3.1</spark.version>
+		<databricks.version>0.4.1</databricks.version>
+		<lombok.version>1.16.18</lombok.version>
+	</properties>
+	<dependencies>
+		<!-- Apache Spark -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_${scala.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_${scala.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- Databricks -->
+		<dependency>
+			<groupId>com.databricks</groupId>
+			<artifactId>spark-xml_${scala.version}</artifactId>
+			<version>${databricks.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.databricks</groupId>
+			<artifactId>spark-csv_${scala.version}</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+
+
+		<!-- Support Jars -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector_2.11</artifactId>
+			<version>2.0.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-scala_2.11</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		
+	</dependencies>
+</project>
